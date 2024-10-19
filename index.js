@@ -20,31 +20,6 @@ function hasTargetSum(array, target) {
   return false;
 }
 
-/* 
-  The Big O time complexity of this function is O(n), 
-  where 'n' is the length of the input array, because 
-  we're iterating through the array once and set operations 
-  (add and has) are O(1) on average.
-*/
-
-/*
-  Pseudocode:
-  - Create an empty set called 'seenNumbers'
-  - For each number in the input array:
-    - Calculate its complement by subtracting the number from the target
-    - If the complement is already in the set, return true
-    - Otherwise, add the current number to the set
-  - If no such pair is found, return false
-*/
-
-/*
-  Explanation:
-  We use a set to track numbers we've seen so far. For each number in the array,
-  we check if its complement (the value that would sum to the target with the current number)
-  exists in the set. If it does, we know we've found a pair of numbers that sum to the target.
-  If we finish iterating through the array and find no such pair, we return false.
-*/
-
 // Test cases
 if (require.main === module) {
   console.log("Expecting: true");
